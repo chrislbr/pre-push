@@ -5,5 +5,9 @@
 ### from Mac/Linux
 
 ```bash
-git config core.hooksPath "${PWD}/.githooks"
+git config --local core.hooksPath .githooks
 ```
+
+## License
+
+_todo_
