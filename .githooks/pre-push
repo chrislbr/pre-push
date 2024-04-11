@@ -11,6 +11,8 @@
 #
 # If pushing without using a named remote those arguments will be equal.
 
+# force commit
+
 remote="$1"
 url="$2"
 
