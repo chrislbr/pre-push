@@ -10,4 +10,4 @@ git config --local core.hooksPath .githooks
 
 ## License
 
-_todo_
+_todo with some text_
