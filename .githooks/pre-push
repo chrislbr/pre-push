@@ -1,0 +1,25 @@
+#!/bin/sh
+
+# An example hook script to verify what is about to be pushed.  Called by "git
+# push" after it has checked the remote status, but before anything has been
+# pushed.  If this script exits with a non-zero status nothing will be pushed.
+#
+# This hook is called with the following parameters:
+#
+# $1 -- Name of the remote to which the push is being done
+# $2 -- URL to which the push is being done
+#
+# If pushing without using a named remote those arguments will be equal.
+
+remote="$1"
+url="$2"
+
+# Trying to push to minor branch
+if [[ "$remote" =~ [0-9]+\.[0-9]+\.[Xx]$ ]]; then
+    if [ ! -z $(git rev-list ..main) ]; then
+        echo "Abandoning push, please merge from main and try again."
+        exit 1
+    fi
+fi
+
+exit 0
