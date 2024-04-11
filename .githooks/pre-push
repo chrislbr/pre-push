@@ -11,7 +11,7 @@
 #
 # If pushing without using a named remote those arguments will be equal.
 
-echo "STOP"
+echo "STOP PRE PRUSH"
 
 exit 1
 
