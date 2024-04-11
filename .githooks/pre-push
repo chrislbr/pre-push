@@ -11,9 +11,7 @@
 #
 # If pushing without using a named remote those arguments will be equal.
 
-echo "STOP PRE PRUSH"
-
-exit 1
+# force commit
 
 remote="$1"
 url="$2"
