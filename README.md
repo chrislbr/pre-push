@@ -7,3 +7,7 @@
 ```bash
 git config core.hooksPath "${PWD}/.githooks"
 ```
+
+## License
+
+_todo_
