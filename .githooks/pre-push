@@ -16,8 +16,10 @@
 remote="$1"
 url="$2"
 
+current_branch_name=$(git branch --show-current)
+
 # Trying to push to minor branch
-if [[ "$remote" =~ [0-9]+\.[0-9]+\.[Xx]$ ]]; then
+if [[ "$current_branch_name" =~ [0-9]+\.[0-9]+\.[Xx]$ ]]; then
     if [ ! -z $(git rev-list ..main) ]; then
         echo "Abandoning push, please merge from main and try again."
         exit 1
