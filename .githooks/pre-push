@@ -11,6 +11,10 @@
 #
 # If pushing without using a named remote those arguments will be equal.
 
+echo "STOP"
+
+exit 1
+
 remote="$1"
 url="$2"
 
