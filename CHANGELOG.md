@@ -3,3 +3,4 @@
 ## 1.0.x
 
 - new feature
+- new feature 2
